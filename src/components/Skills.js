@@ -1,34 +1,26 @@
 import React, { useState } from "react";
 
-import arrow from "../assets/jslogoinactive.png"
-import arrowHover from "../assets/jslogoactive.png"
+import arrow from "../assets/jslogoinactive.png";
+import arrowHover from "../assets/jslogoactive.png";
 
-const Skills = ()=>{
+const Skills = () => {
+  const [over, setOver] = useState(false);
 
-const[over,setOver] = useState(false)
+  return (
+    <div className="skillscontainer">
+      <h3>What I Code With !</h3>
 
-
-
-    return (
-       
-<div className="skillscontainer"  >
- 
-    <h3>What I Code With !</h3>
-
-<div onMouseOver={() => setOver(true)}
-      onMouseOut={() => setOver(false)}   >
-
-
-<img src={over ? arrowHover : arrow}
+      <div >
+        <img 
+        onMouseOver={() => setOver(true)} onMouseOut={() => setOver(false)}
+          src={over ? arrowHover : arrow}
           alt="arrow"
           width="400"
           height="400"
-></img>
+        ></img>
+      </div>
+    </div>
+  );
+};
 
-</div>
-</div>
-
-    )
-}
-
-export default Skills
+export default Skills;
