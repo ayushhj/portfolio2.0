@@ -11,7 +11,7 @@ const App = () => {
           <Navbar />
           <Body />
           <Skills/>
-          {/* <Footer/> */}
+          <Footer/>
           
       </div>
   );
